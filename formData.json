@@ -1,0 +1,46 @@
+[
+  {
+    "name": "ruby ",
+    "gender": "",
+    "subjects": [],
+    "email": "ruby@gmail.com",
+    "city": "Kathmandu",
+    "feedback": ""
+  },
+  {
+    "name": "sid devkota",
+    "gender": "Male",
+    "subjects": [
+      "Mathematics",
+      "Computer Science",
+      "English"
+    ],
+    "email": "sid@gmail.com",
+    "city": "Kathmandu",
+    "feedback": "i love ruby"
+  },
+  {
+    "name": "ruby",
+    "gender": "Female",
+    "subjects": [
+      "Mathematics",
+      "Computer Science",
+      "English"
+    ],
+    "email": "ruby@gmail.com",
+    "city": "Kathmandu",
+    "feedback": "bgfjg"
+  },
+  {
+    "name": "luni",
+    "gender": "Female",
+    "subjects": [
+      "Mathematics",
+      "Physics",
+      "English"
+    ],
+    "email": "luni@gmail.co",
+    "city": "Kathmandu",
+    "feedback": "sgjidu"
+  }
+]

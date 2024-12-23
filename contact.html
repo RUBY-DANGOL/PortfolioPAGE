@@ -4,38 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form</title>
+    <link rel="stylesheet" href ="style.css">
 </head>
 <body>
-    <form action="action.php">
-        <input type="text" placeholder="enter your name">
-        <h4>Enter your Gender</h4>
-        <input type="radio" value="Female" name = "class">Female
-        <input type="radio" value="Male" name="class">Male
-        <input type="radio" value="Other" name="class">Other
-        <h4>whats your favorate subject</h4>
-        <input type="checkbox" value="Mathematics">Mathematics
-        <input type="checkbox" value="Physics">Physics
-        <input type="checkbox" value="Chemistry">Chemistry
-        <input type="checkbox" value="computer science">Computer Science
-        <input type="checkbox" value="English">english
-        <h4>Email</h4>
-        <input type="text"  placeholder="enter your email">
-        <br><br>
-        Select your city
-        <select>
-            <option value="Kathmandu">Kathmandu</option>
-            <option value="pokhara">Pokhara</option>
-            <option value="kavre">Kavre</option>
-            <option value="lalitpur">Lalitpur</option>
-        </select>
-        <br> <br>
-        <!-- <h4>Place your doubts</h4> -->
-        <textarea name="feedback" placeholder="Please give me your valuable feedback or doubts." rows=" 7"></textarea>
-        <br>
-        <input type="submit" value="submit">
+        <div class="code">
+            <div class="page-container">
+                <div class="form-container">
+                    <form id="contactForm" onsubmit="submitForm(event)">
+                        <div class="input-group">
+                            <label for="name">Enter your name:</label>
+                            <input type="text" id="name" name="name" placeholder="Your name">
+                        </div>
+            
+                        <div class="input-group">
+                            <label>Enter your Gender:</label>
+                            <div class="radio-group">
+                                <input type="radio" id="female" name="gender" value="Female">
+                                <label for="female">Female</label>
+                                <input type="radio" id="male" name="gender" value="Male">
+                                <label for="male">Male</label>
+                                <input type="radio" id="other" name="gender" value="Other">
+                                <label for="other">Other</label>
+                            </div>
+                        </div>
+            
+                        <div class="input-group">
+                            <label>What’s your favorite subject:</label>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="math" name="subject" value="Mathematics">
+                                <label for="math">Mathematics</label>
+                                <input type="checkbox" id="physics" name="subject" value="Physics">
+                                <label for="physics">Physics</label>
+                                <input type="checkbox" id="chemistry" name="subject" value="Chemistry">
+                                <label for="chemistry">Chemistry</label>
+                                <input type="checkbox" id="cs" name="subject" value="Computer Science">
+                                <label for="cs">Computer Science</label>
+                                <input type="checkbox" id="english" name="subject" value="English">
+                                <label for="english">English</label>
+                            </div>
+                        </div>
+            
+                        <div class="inline-group">
+                            <div class="input-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" placeholder="Your email">
+                            </div>
+            
+                            <div class="input-group">
+                                <label for="city">Select your city:</label>
+                                <select id="city" name="city">
+                                    <option value="Kathmandu">Kathmandu</option>
+                                    <option value="Pokhara">Pokhara</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+            
+                        <div class="input-group">
+                            <label for="feedback">Feedback:</label>
+                            <textarea id="feedback" name="feedback" placeholder="Please give me your valuable feedback or doubts."></textarea>
+                        </div>
+            
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            function submitForm(event) {
+                event.preventDefault(); // Prevents the default form submission
+        
+                // Collect form data
+                const formData = {
+                    name: document.getElementById("name").value,
+                    gender: document.querySelector('input[name="gender"]:checked')?.value || '',
+                    subjects: Array.from(document.querySelectorAll('input[name="subject"]:checked')).map(cb => cb.value),
+                    email: document.getElementById("email").value,
+                    city: document.getElementById("city").value,
+                    feedback: document.getElementById("feedback").value
+                };
+        
+                // Send data to the server
+                fetch('http://localhost:3000/saveData', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert("Form data saved successfully!");
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("An error occurred while saving the data.");
+                });
+            }
+        </script>
+        
 
 
-    </form>
     
 </body>
 </html>
+
+    

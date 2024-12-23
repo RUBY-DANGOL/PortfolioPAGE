@@ -3,61 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>portfolioPAGE</title>
+    <link rel="stylesheet" href ="style.css">
 </head>
 <body>
-    <header><h1>PORTFOLIO PAGE!!!!</h1>
-        <a href="social.html" target="_main">
-            <img src="picture.png" alt = "picture" height =100>
-        </a>
-        <h4>Click on the picture for my social media!!</h4>
+    <div id= "header">
         
+    <header>
+        <div class="right-side-container">
+            <a href="social.html" target="_main">
+                <img src="picture.png" alt = "picture" height =280 width="360">
+            </a>
+            <p>Click on the picture for my social media!!</p>
+            <p>Email: rubinamaharjan0@gmail.com</p>
+        </div>
     </header>
     <main>
-        <div>
-            <section>
-                <H3>CLICK HERE TO KNOW ABOUT MY EDUCATION!!!!!</H3>
-                <a href="/education.html">EDUCATION!</a><hr/>
-            </section>
+        <div class="navbar">
+            <button onclick="scrollToSection('about')">About</button>
+            <button onclick="scrollToSection('project')">Project</button>
+            <button onclick="scrollToSection('education')">Education</button>
+            <button onclick="scrollToSection('experience')">Experience</button>
+            <button onclick="scrollToSection('contact')">Contact</button>
+            <button onclick="scrollToSection('skills')">Skills</button>
+            <button onclick="scrollToSection('reference')">Reference</button>
         </div>
-        <div>
-            <section><H3>CLICK HERE TO KNOW ABOUT MY EXPERIENCE!!!!!</H3>
-            <a href="/experience.html">EXPERIENCE!</a><hr/>
-            </section>
-        </div>
-        <div>
-            <section>
-                <H3>CLICK HERE TO KNOW ABOUT PROJECTs!!!!!</H3>
-                <a href="/projects.html">PROJECT!</a><hr/>
-            </section>
-        </div>
-        <div>
-            <section><H3>CLICK HERE TO KNOW ABOUT MY SKILLS!!!!!</H3>
-                <a href="skills.html">SKILLS!</a><hr/>
-            </section>
-        </div>
-        <div>
-            <section>
-                <H3> HERE IS EVERY THING  ABOUT ME!!!!!</H3>
-                <a href="aboutme.html">ABOUT ME</a><hr/>
-            </section>
-        </div>
-        <div>
-            <section>
-                <H3>CONTACT ME!!!!!</H3>    
-                <a href="contact.html">CONTACT ME</a>
-            </section>
-        </div>
-        
+                    <div class="info">
+                        <h1>Rubina Maharjan</h1>
+                        <p>AI Student</p>
+                        <div class="location">
+                            <span>Kathmandu</span>
+                        </div> 
+                    </div>
+        <section id="about">
+            <div class="about-section">
+                <h3>About</h3>
+                <div class="content-wrapper">
+                    <div class="about-text">
+                        <pre>
+                            As an AI student at Kathmandu University, I am passionate about learning 
+                            and growing in the field of artificial intelligence. My journey has been filled 
+                            with both challenges and achievements, from conducting field surveys to 
+                            building AI models with my team. I am committed to continuous learning, 
+                            driven by the desire to create impactful solutions that can improve people’s 
+                            lives. I look forward to a future where I can contribute to exciting 
+                            achivements in AI and make a meaningful difference in the world. Besides 
+                            this, I also like to paint, sing, and dance.
 
-    </main><hr/>
-    <footer> 
-        <div>
-            <section>
+
+                            For more information, click on the link below!!
+                            <a href="aboutme.html" class="link_button">ABOUT ME!</a>
+                        </pre>
+                        
+                        
+                    </div>
+                    <div class="corner-image">
+                        <img src="kitty.jpeg" alt="Decorative Image">
+                    </div>
+                </div>
+            </div>
+            
+            
+        </section>
+        <section id="project">
+            <div class="experience">
+                <h3>Project</h3>
+                <div class="content-wrapper">
+                    <pre>
+                        In this journey of one year, I have completed several projects that 
+                        have boosted my confidence.
+
+                        Click on the link for my Projects!
+                        <a href="projects.html" class="link_button">PROJECT!</a>
+                    </pre>
+                    
+
+                    <div class="corner-image">
+                        <img src="kitty.jpeg" alt="Decorative Image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="education">
+            <div class="experience">
+                <h3>Education</h3>
+                <div class="content-wrapper">
+                    <pre>
+                        Here is a summary of my academic achievements and results.
+
+                        For more information click on the link below!! 
+                        <a href="education.html" class="link_button">EDUCATION!</a><hr/>
+                    </pre>
+                    
+
+                    <div class="corner-image">
+                        <img src="kitty.jpeg" alt="Decorative Image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="experience">
+            <div class="experience">
+                <h3>Experience</h3>
+                <div class="content-wrapper">
+                    <pre>
+                        I've encountered some challenges and a few ups and downs as 
+                        I begin my journey as an AI student at Kathmandu University.
+                        However, I've also gained some valuable insights from this 
+                        new experience as a fresher.
+
+                        For more information click on the link below!! 
+                        <a href="/experience.html" class="link_button">EXPERIENCE!</a><hr/>
+                    </pre>
+                    
+
+                    <div class="corner-image">
+                        <img src="kitty.jpeg" alt="Decorative Image">
+                    </div>
+                </div>
+            </div>
+            
+            
+
+        </section>
+        <section id="contact">
+            <div class="experience">
+                <h3>Contact</h3>
+                <div class="content-wrapper">
+                    <pre>
+                        I appreciate your interest in getting to know me better! 
+                        I'm here to assist you with your projects, questions, and 
+                        professional journey, but I don’t have a personal identity 
+                        or contact information like an email address.
+                
+                        If there’s anything you need guidance on whether it’s a project
+                        detail, feedback on a document, or exploring a new topic just let 
+                        me know, and I'll do my best to help!
+
+                        Fill up the form on the link below so i could reach out to you!! 
+                        <a href="contact.html" class="link_button">LEAVE YOUR CONTACT HERE!</a>
+                    </pre>
+                    
+
+                    <div class="corner-image">
+                        <img src="kitty.jpeg" alt="Decorative Image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="experience">
+                <h3>Skills</h3>
+                <div class="content-wrapper">
+                    <pre>
+                        
+                        As a tech student, I've gained proficiency in several 
+                        programming languages and earned certifications from 
+                        Kaggle, DataCamp, and the KUAIC Club. In addition to 
+                        programming, I've developed expertise in a range of 
+                        other skills.
+
+                        For more information click on the link below!! 
+                        <a href="/skills.html" class="link_button">SKILL!</a><hr/>
+                    </pre>
+                    
+
+                    <div class="corner-image">
+                        <img src="kitty.jpeg" alt="Decorative Image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="reference">
+            <footer>    
                 <H3>REFERENCE IF YOU NEED HELP!!!!!</H3>    
-                <a href="reference.html">HELP!</a>
-            </section>
-        </div>
-    </footer>
+                <a href="reference.html" class="link_button">HELP!</a>
+            </footer>    
+        </section>
+        
+        <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">Top</button>
+
+        <script src="script.js"></script>
+    </main><hr/>
 </body>
 </html> 
